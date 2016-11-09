@@ -419,5 +419,12 @@ input[type=text] {
   bottom: 0;
   display: none;
   text-align: center; }
+  #overlay img {
+    margin-top: 10%;
+    width: 50%;
+    height: 50%;
+    border-radius: 6px; }
+  #overlay p {
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */
