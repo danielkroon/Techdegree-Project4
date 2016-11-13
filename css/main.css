@@ -427,4 +427,28 @@ input[type=text] {
   #overlay p {
     color: white; }
 
-/*# sourceMappingURL=styles.css.map */
+#previous-button {
+  height: 128px;
+  width: 128px;
+  background-image: url(/img/buttonPrevious.png);
+  position: absolute;
+  top: 35%;
+  right: 80%; }
+
+#next-button {
+  height: 128px;
+  width: 128px;
+  background-image: url(/img/buttonNext.png);
+  position: absolute;
+  top: 35%;
+  left: 80%; }
+
+#closeLightbox {
+  height: 128px;
+  width: 128px;
+  background-image: url(/img/buttonClose.png);
+  position: absolute;
+  top: 75%;
+  left: 45%; }
+
+/*# sourceMappingURL=main.css.map */
