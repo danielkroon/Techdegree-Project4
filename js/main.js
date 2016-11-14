@@ -3,6 +3,23 @@ $('input').focus(function() {
     $(this).removeAttr('placeholder'); 
 });
 
+//SEARCH GALLERY
+var search;
+var searchArray = [];
+var imageArray = [];
+
+function keyUpFunction() {
+    search = document.getElementById('search').value;
+    return false;
+};
+
+var alt = document.getElementsByTagName('img')[0].alt;
+imageArray.push(alt);
+console.log(imageArray);
+
+if ( search === imageArray ) {
+    alert('Hiiii');
+};
 
 //CALL LIGHTBOX
 var $overlay = $('<div id="overlay"></div>');
