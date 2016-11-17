@@ -5,21 +5,23 @@ $('input').focus(function() {
 
 //SEARCH GALLERY
 var search;
-var searchArray = [];
 var imageArray = [];
 
 function keyUpFunction() {
     search = document.getElementById('search').value;
-    return false;
+    
+    // Put all images in a var
+    var images = document.getElementById('img');
+    
+    // Check all images for match
+    for (var i = 0; i < imageArray.length; i++){
+        var alt = images[i].alt;
+        console.log(alt);
+        console.log('Does search query match alt for this image?' + search == alt);
+    }    
 };
 
-var alt = document.getElementsByTagName('img')[0].alt;
-imageArray.push(alt);
-console.log(imageArray);
-
-if ( search === imageArray ) {
-    alert('Hiiii');
-};
+keyUpFunction();
 
 //CALL LIGHTBOX
 var $overlay = $('<div id="overlay"></div>');
