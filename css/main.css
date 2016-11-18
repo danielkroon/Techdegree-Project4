@@ -388,7 +388,8 @@ body {
   margin-top: 1rem; }
   .cell img {
     display: block;
-    max-width: 200px; }
+    max-width: 200px;
+    border-radius: 6px; }
 
 .one-col-grid {
   display: flex;
@@ -428,6 +429,7 @@ input[type=text] {
     color: white; }
 
 #previous-button {
+  cursor: pointer;
   height: 128px;
   width: 128px;
   background-image: url(/img/buttonPrevious.png);
@@ -436,6 +438,7 @@ input[type=text] {
   right: 80%; }
 
 #next-button {
+  cursor: pointer;
   height: 128px;
   width: 128px;
   background-image: url(/img/buttonNext.png);
@@ -444,6 +447,7 @@ input[type=text] {
   left: 80%; }
 
 #closeLightbox {
+  cursor: pointer;
   height: 128px;
   width: 128px;
   background-image: url(/img/buttonClose.png);

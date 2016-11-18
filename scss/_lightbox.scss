@@ -21,6 +21,7 @@
 }
 
 #previous-button {
+    cursor: pointer;
     height: 128px;
     width: 128px;
     background-image: url(/img/buttonPrevious.png);
@@ -30,6 +31,7 @@
 }
 
 #next-button {
+    cursor: pointer;
     height: 128px;
     width: 128px;
     background-image: url(/img/buttonNext.png);
@@ -39,6 +41,7 @@
 }
 
 #closeLightbox{
+    cursor: pointer;
     height: 128px;
     width: 128px;
     background-image: url(/img/buttonClose.png);
