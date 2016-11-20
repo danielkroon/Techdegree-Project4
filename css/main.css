@@ -387,7 +387,6 @@ body {
   margin-bottom: 1rem;
   margin-top: 1rem; }
   .cell img {
-    display: block;
     max-width: 200px;
     border-radius: 6px; }
 
@@ -422,8 +421,9 @@ input[type=text] {
   text-align: center; }
   #overlay img {
     margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
-    height: 50%;
     border-radius: 6px; }
   #overlay p {
     color: white; }
@@ -433,26 +433,26 @@ input[type=text] {
   height: 128px;
   width: 128px;
   background-image: url(/img/buttonPrevious.png);
-  position: absolute;
-  top: 35%;
-  right: 80%; }
+  position: relative;
+  margin: auto;
+  display: inline-block; }
 
 #next-button {
+  display: inline-block;
   cursor: pointer;
   height: 128px;
   width: 128px;
   background-image: url(/img/buttonNext.png);
-  position: absolute;
-  top: 35%;
-  left: 80%; }
+  position: relative;
+  margin: auto; }
 
 #closeLightbox {
   cursor: pointer;
   height: 128px;
   width: 128px;
   background-image: url(/img/buttonClose.png);
-  position: absolute;
-  top: 75%;
-  left: 45%; }
+  display: inline-block;
+  position: relative;
+  margin: auto; }
 
 /*# sourceMappingURL=main.css.map */

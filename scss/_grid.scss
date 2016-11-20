@@ -10,12 +10,6 @@ body {
   padding: 0 1rem;
 }
 
-// .container-lightbox {
-//   display: flex;
-//   max-width: 980px;
-//   justify-content: center;
-// }
-
 .grid {
   display: flex;
   flex-direction: column;
@@ -33,7 +27,6 @@ body {
   margin-top: 1rem;
   
    img {
-     display: block;
      max-width: 200px;
      border-radius: 6px;
    }
