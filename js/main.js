@@ -8,7 +8,7 @@ Search Filter
 
         // Put all images in a var
         var images = document.getElementsByClassName('grid')[0].getElementsByTagName('img');
-
+        
         // Check all images for match
         for (var i = 0; i < images.length; i++) {
             var alt = images[i].alt;
@@ -17,6 +17,7 @@ Search Filter
             // console.log('Does ' + alt + ' contain ' + search + ' for this image?' + ' ' + (alt.toLowerCase().indexOf(search.toLowerCase()) > -1));
             if (alt.toLowerCase().indexOf(search.toLowerCase()) === -1) {
                 images[i].style.display = 'none';
+                
             } else {
                 images[i].style.display = 'block';
             }
@@ -62,7 +63,7 @@ function getCurrentImage(currentImage) {
     $image.attr('src', imageLocation);
 
     // Get alt text from image
-    var captionText = $(currentImage).attr('alt');
+    var captionText = $(currentImage).children('img').attr("alt");
     $caption.text(captionText);
 }
 
