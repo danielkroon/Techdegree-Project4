@@ -1,4 +1,3 @@
-
 /* ================================= 
 Search Filter
 ==================================== */
@@ -8,14 +7,14 @@ Search Filter
         var search = document.getElementById('search').value;
 
         // Put all images in a var
-        var images = document.getElementsByTagName('img');
+        var images = document.getElementsByClassName('grid')[0].getElementsByTagName('img');
 
         // Check all images for match
         for (var i = 0; i < images.length; i++) {
             var alt = images[i].alt;
 
             // console.log('Does ' + search + ' match ' + alt + ' for this image?' + ' ' + (search == alt));
-			// console.log('Does ' + alt + ' contain ' + search + ' for this image?' + ' ' + (alt.toLowerCase().indexOf(search.toLowerCase()) > -1));
+            // console.log('Does ' + alt + ' contain ' + search + ' for this image?' + ' ' + (alt.toLowerCase().indexOf(search.toLowerCase()) > -1));
             if (alt.toLowerCase().indexOf(search.toLowerCase()) === -1) {
                 images[i].style.display = 'none';
             } else {
@@ -24,7 +23,6 @@ Search Filter
         }
     };
 })();
-
 
 /* ================================= 
 Lightbox
@@ -37,14 +35,11 @@ var $buttonPrevious = $('<div id="previous-button"></div>');
 var $buttonNext = $('<div id="next-button"></div>');
 var $closeLightbox = $("<div id='closeLightbox'></div>");
 
-
-
 $overlay.append($image); //add image to overlay
 $overlay.append($caption); //add caption to overlay
 $overlay.append($buttonPrevious); //add next button to overlay
 $overlay.append($closeLightbox);
 $overlay.append($buttonNext); //add next button to overlay
-
 
 $('body').append($overlay); //add overlay
 
@@ -57,26 +52,6 @@ $('.grid a').click(function(event) {
     // Show the overlay
     $overlay.fadeIn(400);
 
-});
-
-// Lightbox arrow navigation
-$('body').keyup(function (e) {
-    if (e.keyCode==39) {
-        getNextImage();
-    } else if (e.keyCode==37) {
-        getPrevImage();
-    } else {
-		return;
-	}
-});
-
-// Lightbox click navigation
-$buttonNext.click(function() {
-    getNextImage();
-});
-
-$buttonPrevious.click(function() {
-    getPrevImage();
 });
 
 // Get images
@@ -93,7 +68,7 @@ function getCurrentImage(currentImage) {
 
 function getPrevImage() {
     imageParent = $(thisImage).parent().prev();
-    if (imageParent.length != 0) {
+    if (imageParent.length !== 0) {
         thisImage = $(imageParent).children("a");
     }
     getCurrentImage(thisImage);
@@ -101,7 +76,7 @@ function getPrevImage() {
 
 function getNextImage() {
     imageParent = $(thisImage).parent().next();
-    if (imageParent.lengt != 0) {
+    if (imageParent.lengt !== 0) {
         thisImage = $(imageParent).children('a');
     }
     getCurrentImage(thisImage);
@@ -110,4 +85,28 @@ function getNextImage() {
 // Close overlay
 $closeLightbox.click(function() {
     $($overlay).fadeOut(400);
+});
+
+/* ================================= 
+Navigation
+==================================== */
+
+// Lightbox arrow navigation
+$('body').keyup(function(e) {
+    if (e.keyCode == 39) {
+        getNextImage();
+    } else if (e.keyCode == 37) {
+        getPrevImage();
+    } else {
+        return;
+    }
+});
+
+// Lightbox click navigation
+$buttonNext.click(function() {
+    getNextImage();
+});
+
+$buttonPrevious.click(function() {
+    getPrevImage();
 });
