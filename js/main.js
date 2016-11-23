@@ -77,11 +77,13 @@ function getPrevImage() {
 
 function getNextImage() {
     imageParent = $(thisImage).parent().next();
-    if (imageParent.lengt !== 0) {
+
+    if (imageParent.length !== 0) {
         thisImage = $(imageParent).children('a');
-    }
+    } 
     getCurrentImage(thisImage);
-}
+    
+};
 
 // Close overlay
 $closeLightbox.click(function() {
@@ -105,6 +107,8 @@ $('body').keyup(function(e) {
 
 // Lightbox click navigation
 $buttonNext.click(function() {
+
+    
     getNextImage();
 });
 
