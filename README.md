@@ -1,4 +1,4 @@
-#JavaScript Interactive Photo Gallery
+#Interactive Photo Gallery
 
 Project 4 Challenge: Create an interactive photo gallery using JavaScript and jQuery from provided photos with descriptions.
 
